@@ -1,0 +1,10 @@
+ENV
+*.pyc
+.*swp
+*.db
+uploads
+backups
+
+static/gen
+static/.webassets-cache/
+
