@@ -9,16 +9,17 @@ Flask-Login
 A simple flask authentication blueprint to be used in your flask app.
 Creates login ('auth.login') and logout ('auth.logout') views to be used inside your templates/views.
 
+A basic User class is also provided containing werkzeug password hashing.
+
 
 ## Initialization
 
 Inside your app initialize Flask-Auth as follows:
 
 ```
-from yourapplication.auth import auth, login_manager
+from yourapplication import auth
 
-login_manager.init_app(app)
-app.register_blueprint(auth)
+auth.init_app(app)
 ```
 
 Flask-Auth assumes the following directory structure:

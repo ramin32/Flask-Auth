@@ -12,6 +12,9 @@ login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
 login_manager.login_message_category = "danger"
 
+def init_app(app):
+    login_manager.init_app(app)
+    app.register_blueprint(auth)
     
 @login_manager.user_loader
 def load_user(user_id):
