@@ -4,7 +4,7 @@ from wtforms import Form, TextField, PasswordField
 from wtforms.validators import Required, Required, ValidationError
 from flask import Blueprint, request, render_template, flash, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
-from pharmacy.models import db
+from ..models import db
 
 auth = Blueprint('auth', __name__, template_folder='templates')
 
